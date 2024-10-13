@@ -14,6 +14,7 @@ int main (){
      double const_MET_SLOW_WALK = 2.0;
      double const_MET_FAST_WALK = 3.0;
      double  const_MET_JOGGING = 8.0;
+     double cont_MET_SPRINTING =10.0;
 
     // User input for exercise duration and weight
 
@@ -65,7 +66,7 @@ int main (){
 
                
                 //CALCULATIONS!!
-                cout<< "Your total amount of calories burnt is : \n"<< (duration *3*3.5*weight)/200<<"Calories" <<endl;
+                 cout<< "Your total amount of calories burnt is : \n"<< (duration *3*3.5*weight)/200<<"Calories" <<endl;
                  cout<< "\n"<<endl;
                  cout<< "\n"<<endl;
                  cout<< "\n"<<endl;
