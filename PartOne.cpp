@@ -76,7 +76,7 @@ int main (){
                  cin >> TargCal;
 
                  // Print the duration needed
-                cout << "\nDuration needed to burn " << TargCal << " calories:\n";
+                  cout << "\nDuration needed to burn " << TargCal << " calories:\n";
                   cout << "Walking Quickly: " << durationFastWalk << " minutes\n";
                  
                   break;
