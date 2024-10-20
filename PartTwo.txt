@@ -1,0 +1,97 @@
+// Halimatou Diaby
+//Lab Number 5 🎀
+//9/23/24
+
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main() {
+    float data_gb;
+
+    // Get user input for data plan
+    cout << "Enter the number of gigabytes in your monthly hotspot plan: ";
+    cin >> data_gb;
+
+    // Convert gigabytes to megabytes
+    float data_mb = data_gb * 1000;  // 1 GB = 1000 MB
+
+    // Data usage per hour in MB
+    float low_quality_usage = 43.2;
+    float normal_quality_usage = 72.0;
+    float high_quality_usage = 115.2;
+
+    // Ask the user for the quality they wish to download
+    char quality_choice;
+    cout << "Which quality do you want to download? (L for Low, N for Normal, H for High): ";
+    cin >> quality_choice;
+
+    // Calculate hours for the chosen quality
+    float hours = 0;
+
+    switch (quality_choice) {
+        case 'L':
+        case 'l': // Accepts both uppercase and lowercase
+            hours = data_mb / low_quality_usage;
+            cout << fixed << setprecision(2);
+            cout << "\nYou can stream approximately " << hours << " hours of low quality music." << endl;
+            break;
+        case 'N':
+        case 'n':
+            hours = data_mb / normal_quality_usage;
+            cout << fixed << setprecision(2);
+            cout << "\nYou can stream approximately " << hours << " hours of normal quality music." << endl;
+            break;
+        case 'H':
+        case 'h':
+            hours = data_mb / high_quality_usage;
+            cout << fixed << setprecision(2);
+            cout << "\nYou can stream approximately " << hours << " hours of high quality music." << endl;
+            break;
+        default:
+            cout << "Invalid choice. Please enter L, N, or H." << endl;
+            break;
+    }
+
+    return 0;
+}
+
+ 
+
+
+
+  
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+/*My Mobile hotspot allows for a limited number of gigabytes of data! How can I figure out how
+ much music streaming I can do per month? Here is some information you need for your program:
+Low quality is typically 96kbps (kilobits per second). On average, Low-quality audio streaming uses 0.72MB 
+per minute or 43.2MB per hour. Normal quality is typically 160kbps. Normal-quality music streaming uses 1.20MB 
+per minute or 72MB per hour on average. High quality music is typically 320kbps. High-quality streaming music uses 
+2.40MB per minute or 115.2MB per hour on average.
+ 
+Write a program that asks the user how many gigabytes of data are included in their monthly hotspot plan. Then print out the number 
+of hours for low, normal, and high quality music the user can stream per month. 
+You may assume that a gigabyte is 1 billion (1,000,000,000) bytes and a megabyte is 1 million (1,000,000) bytes.
+
+
+
+
+
+
+*/
